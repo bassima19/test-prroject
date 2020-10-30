@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <title>My Java</title>
+    <script type="text/myscript" src="js/myscript.js"></script>
+    </body>
+    <style>
+#container{
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+#text {
+    font-size: 20px;
+}
+
+#zar {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+    transition-duration: 0.1s;
+    width: 125px;
+}
+#zar:hover{
+    background-color: red;
+    color: white;
+}
+#zar:active{
+    background-color:rgb(207, 25, 207) ;
+    transform:translateY(4px);
+}
+li {
+    list-style-type: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: center;
+}
+li:hover{
+    background-color: #9f9f9f;
+    transition-duration: 0.2s;
+
+}
+.selected {
+    background-color: #99ffaa;
+}
+#text {
+    text-align: center;
+}
+    </style>
+    
+    <body dir="rtl">
+        <h1 id="text">Welcome to my world</h1> 
+        <div id="container">
+            
+           
+<button id="zar" type="button">Click Here</button>
+</div>
+<ul id="menu">
+    <li>life is not easy</li>
+    <li>Be Strong </li>
+    <li>Love yourself</li>
+    <li>Be patiemt</li>
+</ul>
+ <script>
+   document.getElementById("text").innerHTML = "Bassima ayad ";
+var menuItem = document.getElementById("menu").getElementsByTagName("li");
+var btn = document.getElementById("zar");
+var myMenu = document.getElementById("menu");
+
+menuItem[0].innerHTML = "love"; 
+menuItem[1].innerHTML = "Hello World"; 
+menuItem[2].innerHTML = "Welcome to my Life"; 
+menuItem[3].innerHTML = "Smile"; 
+for (i = 0; i< menuItem.length; i++){
+    menuItem[i].addEventListener("click",selectItem);
+}
+function selectItem(){
+    alert("trust me");
+}
+for (i = 0; i< menuItem.length; i++){
+   menuItem[i].addEventListener("click",selectItem);
+   }
+function selectItem(){
+    headLine.innerHTML = this.innerHTML;
+    for (i = 0; i< menuItem.length; i++){
+        menuItem[0].classList.remove("selected");
+}
+    this.classList.add("selected");
+}
+    
+btn.addEventListener("click" , newItem);
+function newItem(){
+  myMenu.innerHTML += "<li> Big Heart" +  "</li>"
+}
+  
+ </script>
+  
+</html>
